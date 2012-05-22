@@ -1,0 +1,300 @@
+/* Lightbox */
+#lightbox{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+	}
+
+#lightbox a img{ border: none; }
+
+#outerImageContainer{
+	position: relative;
+	background-color: #ececec;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	}
+
+#imageContainer{
+	padding: 10px;
+	}
+
+#loading{
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+	}
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	}
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{
+	width: 49%;
+	height: 100%;
+	background: transparent url(../images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	}
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../images/prevlabel.gif) left 100% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../images/nextlabel.gif) right 100% no-repeat; }
+
+
+#imageDataContainer{
+	font: 10px Verdana, Helvetica, sans-serif;
+	background-color: #ececec;
+	margin: 0 auto;
+	line-height: 1.4em;
+	}
+
+#imageData{
+	padding:0 10px;
+	}
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em;	}	
+		
+#overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+	height: 500px;
+	background-color: #000;
+	opacity: 0.6;
+	}
+	
+
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}
+
+* html>images .clearfix {
+	display: inline-block; 
+	width: 100%;
+	}
+
+* html .clearfix {
+	/* Hides from IE-mac \*/
+	height: 1%;
+	/* End hide from IE-mac */
+	}	
+/* /Lightbox */	
+	
+/* CSS by Robin Albeck */
+
+/* Index Seitenlayout */
+
+/* Body */
+body {
+    margin-top: 5px;
+    margin-left: 5px;
+	background: #FFF;
+    color: #000000;
+    font: normal 0.82em/1.2em "Arial", "Verdana", "Lucida Grande", "Lucida Sans Unicode";
+    }
+
+/* Linkumgang */
+a {
+    cursor:pointer;
+  }
+
+/* Ueberschriften */
+
+h1 {
+	color:#000;
+	font-size: 1.5em;
+	margin:0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+h2 {
+	color:#000;
+	font-size: 1.0em;	
+	margin:0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+h3 {
+	color:#000;
+	font-size: 0.7em;
+	margin:0px;
+	font-weight: normal;
+	font-style: normal;
+}
+    
+/* Individuelles Textlayout */
+    .navitext {
+    text-indent: 6.0em;
+    line-height: 1;
+    }
+
+/* Hintergrundbild / Karte*/
+#bg {
+    height: 555px; width: 800px; 
+    background-color: #fff;
+    background-image: url(../images/background.jpg);
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    position: absolute;
+    }
+
+/* Position der Wegpunkte */
+#Standort1 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 612px; 
+    margin-top: 56px; 
+    position: absolute; 
+    visibility: visible; 
+    }    
+    
+#Standort2 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 624px; 
+    margin-top: 106px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+#Standort3 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 536px; 
+    margin-top: 117px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+#Standort4 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 448px; 
+    margin-top: 169px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+#Standort5 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 444px; 
+    margin-top: 216px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+#Standort6 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 395px; 
+    margin-top: 275px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+#Standort7 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 319px; 
+    margin-top: 316px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+    
+#Standort8 { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 193px; 
+    margin-top: 348px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+    
+/* Start/Ziel Wegpunkte */
+#start { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 625px; 
+    margin-top: 23px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+#ziel { 
+    height: 22px; 
+    width: 22px; 
+    margin-left: 73px; 
+    margin-top:415px; 
+    position: absolute; 
+    visibility: visible; 
+    }
+
+/* Schriftzug - Franz John Salztangente */
+#Sitelogo { 
+    background-image: url(../images/title_font.gif);
+    background-repeat:no-repeat;
+    height: 101px; width: 301px; 
+    position: absolute;
+    margin-left: 20px; 
+    margin-top: 20px; 
+    }
+ 
+/* Navigationsbereich */    
+#footer_wrap {
+    background-image: url(../images/navi_background.jpg);
+    background-repeat: no-repeat;
+    height: auto; 
+    width: 765px; 
+    position: absolute;
+    margin-left: 20px; 
+    margin-top: 550px; 
+}
+
+#footer_info {
+	padding-left:80px;
+	padding-top:12px;
+}
+
+#footer_meta {
+	padding-left:80px;
+	padding-top:20px;
+}
+
+#Pointdummy {
+    height: 30px; width: 30px; 
+    position: absolute;
+    margin-left: 65px; 
+    margin-top: 555px; 
+    }
+    
+#Forwardbutton {
+    height: 30px; width: 30px; 
+    position: absolute;
+    margin-left: 725px; 
+    margin-top: 555px; 
+    }

@@ -1,0 +1,121 @@
+
+<script>
+  $(window).bind("load", function() {
+    $("div#salztangente-slider").slideViewerPro({
+      thumbs: 12, 
+      //        autoslide: true, 
+      asTimer: 3500, 
+      typo: true,
+      galBorderWidth: 0,
+      thumbsBorderOpacity: 0, 
+      buttonsTextColor: "#707070",
+      buttonsWidth: 40,
+      thumbsActiveBorderOpacity: 0.8,
+      thumbsActiveBorderColor: "#0a3597",
+      shuffle: false
+    });
+  });
+
+
+  Galleria.loadTheme('/js/classic/galleria.classic.min.js');
+
+  /*  $("#galleria").galleria({
+    width: 600,
+    height: 600
+  });*/
+
+</script>
+<style>
+
+  #mainsection aside {
+    left: 820px;
+    top: 150px;
+    position: absolute;
+    width: 250px;
+    z-index: 100;
+  }
+
+  #mainsection aside h1 {
+    font-family: "garamond,sans-serif";
+    font-style: italic;
+  }
+
+  .galleria-stage {
+    position: absolute;
+    top: 0px;
+    bottom: 50px;
+    left: 10px;
+    right: 10px;
+    overflow:hidden;
+}
+</style>
+</head>
+
+<body>
+  <section id="mainsection">
+  <div id="galleria"></div>
+
+  <aside id="galleria-aside"></aside>
+  <script>
+    <%
+    punkte = YAML::load( File.open( 'includes/wegpunkte.yaml' ) )
+
+    puts punkte.to_s
+
+    data = YAML::load( File.open( 'includes/images.yaml' ) )
+    data.each do |elem|
+    if elem["location"]
+    elem["aside"] = %{<h1>Download data<\/h1><p><img src="/images/icon_pdf.gif" align="left"><a href="#{elem["pdf"]}">Download #{elem["name"]}</a> (#{elem["pdf_size"]}) /<br>Standort: #{elem["location"]}</p>}
+        end
+        end
+
+        require 'json'
+        %>
+
+        var data = <%= data.to_json %>
+
+        /*    $.each(data, function(idx, elem) {
+          data[idx]["aside"] = '<h1>Download data<\/h1><p><img src="/images/icon_pdf.gif" align="left"><a href="' + elem.pdf + '">Download ' + elem.name + '<\/a> (' + elem.size + ') /<br>Standort: ' + elem.location + '<br>Download gps data<\/p>';
+            })
+            */
+
+            $('#galleria').galleria({
+              dataSource: data,
+              width: 800,
+              height: 544
+            });
+
+            Galleria.ready(function(options) {
+
+              // this = the gallery instance
+              // options = the gallery options
+
+              this.bind(Galleria.IMAGE, function(e) {
+                //      console.log(e.index);
+
+                var contents = data[e.index].aside;
+                if (contents)
+                $("#galleria-aside").html(data[e.index].aside);
+                else
+                $("#galleria-aside").html("");
+                //Galleria.log(this) // the image index
+                //Galleria.log(e.imageTarget); 
+              });
+
+              // $('#galleria .galleria-thumbnails').prepend('<div class="galleria-image"><a href="/"><img src="/images/background.jpg" width="59" height="40" /></a></div>');
+
+              this.bind('thumbnail', function(e) {
+                if (e.index == 0)
+                $(e.thumbTarget).click( function() {window.location = '/';} );
+              });
+
+              //var inner = $('#galleria .galleria-thumbnails:first-child').html(function(idx, old) {
+                //    return '<a href="/">' + old + '</a>';
+                //});
+
+            });
+
+
+          </script>
+          </section>
+

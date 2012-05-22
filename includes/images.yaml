@@ -1,0 +1,53 @@
+[
+  {
+    image: '/images/background.jpg'
+  },
+  {
+    image: '/images/bild1.jpg',
+    location: 'Gronau – Epe',
+    pdf: '/stuff/karte1.pdf',
+    pdf_size: '342 KB'
+  },
+  {
+    image: '/images/bild2.jpg',
+    location: 'Ahaus - Haus Horst',
+    pdf: '/stuff/karte2.pdf',
+    pdf_size: '363 KB'
+  },
+  {
+    image: '/images/bild3.jpg',
+    location: 'Ottenstein - Hörsteloe',
+    pdf: '/stuff/karte3.pdf',
+    pdf_size: '370 KB'
+  },
+  {
+    image: '/images/bild4.jpg',
+    location: 'Vreden - Ostendarp',
+    pdf: '/stuff/karte4.pdf',
+    pdf_size: '383 KB'
+  },
+  {
+    image: '/images/bild5.jpg',
+    location: 'Stadtlohn - Wenningfeld',
+    pdf: '/stuff/karte5.pdf',
+    pdf_size: '397 KB'
+  },
+  {
+    image: '/images/bild6.jpg',
+    location: 'Südlohn - Oeding',
+    pdf: '/stuff/karte6.pdf',
+    pdf_size: '362 KB'
+  },
+  {
+    image: '/images/bild7.jpg',
+    location: 'Borken - Burlo',
+    pdf: '/stuff/karte7.pdf',
+    pdf_size: '367 KB'
+  },
+  {
+    image: '/images/bild8.jpg',
+    location: 'Bocholt - Barlo',
+    pdf: '/stuff/karte8.pdf',
+    pdf_size: '350 KB'
+  }
+]
