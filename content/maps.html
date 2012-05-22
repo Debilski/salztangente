@@ -1,58 +1,64 @@
-
-<script>
-  $(window).bind("load", function() {
-    $("div#salztangente-slider").slideViewerPro({
-      thumbs: 12, 
-      //        autoslide: true, 
-      asTimer: 3500, 
-      typo: true,
-      galBorderWidth: 0,
-      thumbsBorderOpacity: 0, 
-      buttonsTextColor: "#707070",
-      buttonsWidth: 40,
-      thumbsActiveBorderOpacity: 0.8,
-      thumbsActiveBorderColor: "#0a3597",
-      shuffle: false
+---
+body_id: maps
+header: |
+  <script>
+    $(window).bind("load", function() {
+      $("div#salztangente-slider").slideViewerPro({
+        thumbs: 12, 
+        //        autoslide: true, 
+        asTimer: 3500, 
+        typo: true,
+        galBorderWidth: 0,
+        thumbsBorderOpacity: 0, 
+        buttonsTextColor: "#707070",
+        buttonsWidth: 40,
+        thumbsActiveBorderOpacity: 0.8,
+        thumbsActiveBorderColor: "#0a3597",
+        shuffle: false
+      });
     });
-  });
 
 
-  Galleria.loadTheme('/js/classic/galleria.classic.min.js');
+    Galleria.loadTheme('/js/classic/galleria.classic.min.js');
 
-  /*  $("#galleria").galleria({
-    width: 600,
-    height: 600
-  });*/
+    /*  $("#galleria").galleria({
+      width: 600,
+      height: 600
+    });*/
 
-</script>
-<style>
+  </script>
+  <style>
 
-  #mainsection aside {
-    left: 820px;
-    top: 150px;
-    position: absolute;
-    width: 250px;
-    z-index: 100;
-  }
+    #mainsection aside {
+      left: 820px;
+      top: 150px;
+      position: absolute;
+      width: 250px;
+      z-index: 100;
+    }
 
-  #mainsection aside h1 {
-    font-family: "garamond,sans-serif";
-    font-style: italic;
-  }
+    #mainsection aside h1 {
+      font-family: "garamond,sans-serif";
+      font-style: italic;
+    }
 
-  .galleria-stage {
-    position: absolute;
-    top: 0px;
-    bottom: 50px;
-    left: 10px;
-    right: 10px;
-    overflow:hidden;
-}
-</style>
-</head>
+    .galleria-stage {
+      position: absolute;
+      top: 0px;
+      bottom: 50px;
+      left: 10px;
+      right: 10px;
+      overflow:hidden;
+    }
 
-<body>
-  <section id="mainsection">
+    .galleria-container {
+      background: #303030;
+    }
+  </style>
+
+---
+
+<section id="mainsection">
   <div id="galleria"></div>
 
   <aside id="galleria-aside"></aside>
@@ -65,7 +71,7 @@
     data = YAML::load( File.open( 'includes/images.yaml' ) )
     data.each do |elem|
     if elem["location"]
-    elem["aside"] = %{<h1>Download data<\/h1><p><img src="/images/icon_pdf.gif" align="left"><a href="#{elem["pdf"]}">Download #{elem["name"]}</a> (#{elem["pdf_size"]}) /<br>Standort: #{elem["location"]}</p>}
+    elem["aside"] = %{<h1>#{elem["location"]}<\/h1><p><img src="/images/icon_pdf.gif" align="left"><a href="#{elem["pdf"]}">Download #{elem["name"]}</a> (#{elem["pdf_size"]}) /<br>Standort: #{elem["location"]}</p>}
         end
         end
 

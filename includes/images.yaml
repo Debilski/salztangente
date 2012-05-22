@@ -6,7 +6,8 @@
     image: '/images/bild1.jpg',
     location: 'Gronau – Epe',
     pdf: '/stuff/karte1.pdf',
-    pdf_size: '342 KB'
+    pdf_size: '342 KB',
+    additional: '/images/schild-gronau_ok-tmp.jpg'
   },
   {
     image: '/images/bild2.jpg',

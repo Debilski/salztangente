@@ -16,8 +16,8 @@
 compile '/static/*' do
 end
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+compile '/css/*' do
+  filter :sass, :syntax => :scss
 end
 
 compile '/javascript/' do
@@ -37,8 +37,8 @@ route '/static/*' do
   item.identifier[7..-2]
 end
 
-route '/stylesheet/' do
-  '/style.css'
+route '/css/*' do
+  item.identifier.chop + '.css'
 end
 
 route '/javascript/*' do

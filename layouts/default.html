@@ -27,10 +27,18 @@
   <link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="screen">
   <link rel="stylesheet" href="/css/svwp_style.css" type="text/css" media="screen">
   <link type="text/css" rel="stylesheet" href="/js/classic/galleria.classic.css">
+  
+  <link type="text/css" rel="stylesheet" href="/css/stylesheet.css">
 
-    <meta name="generator" content="nanoc 3.3.3">
+  <meta name="generator" content="nanoc 3.3.3">
+
+  <%=
+    if @item[:header]
+      @item[:header]
+    end %>
   </head>
-  <body>
+
+  <body <%= if @item[:body_id] then %{id="#{@item[:body_id]}"} end %>>
     <div id="main">
       <%= yield %>
     </div>
