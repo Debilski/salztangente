@@ -1,54 +1,74 @@
 [
   {
-    image: '/images/background.jpg'
+    thumb: '/images/background-left.jpg',
+    thumblink: '/'
   },
   {
     image: '/images/bild1.jpg',
-    location: 'Gronau – Epe',
+    location: 'Gronau&thinsp;-<br> Epe',
     pdf: '/stuff/karte1.pdf',
     pdf_size: '342 KB',
-    additional: '/images/schild-gronau_ok-tmp.jpg'
+    additional: '/images/1_schild.jpg',
+    imgid: 1
   },
   {
     image: '/images/bild2.jpg',
-    location: 'Ahaus - Haus Horst',
+    location: 'Ahaus&thinsp;-<br> Haus Horst',
     pdf: '/stuff/karte2.pdf',
-    pdf_size: '363 KB'
+    pdf_size: '363 KB',
+    additional: '/images/2_schild.jpg',
+    imgid: 2
   },
   {
     image: '/images/bild3.jpg',
-    location: 'Ottenstein - Hörsteloe',
+    location: 'Ottenstein&thinsp;-<br> Hörsteloe',
     pdf: '/stuff/karte3.pdf',
-    pdf_size: '370 KB'
+    pdf_size: '370 KB',
+    additional: ['/images/3a_schild.jpg', '/images/3b_schild.jpg'],
+    imgid: 3
   },
   {
     image: '/images/bild4.jpg',
-    location: 'Vreden - Ostendarp',
+    location: 'Vreden&thinsp;-<br> Ostendarp',
     pdf: '/stuff/karte4.pdf',
-    pdf_size: '383 KB'
+    pdf_size: '383 KB',
+    additional: '/images/4_schild.jpg',
+    imgid: 4
   },
   {
     image: '/images/bild5.jpg',
-    location: 'Stadtlohn - Wenningfeld',
+    location: 'Stadtlohn&thinsp;-<br> Wenningfeld',
     pdf: '/stuff/karte5.pdf',
-    pdf_size: '397 KB'
+    pdf_size: '397 KB',
+    additional: '/images/5_schild.jpg',
+    imgid: 5
   },
   {
     image: '/images/bild6.jpg',
-    location: 'Südlohn - Oeding',
+    location: 'Südlohn&thinsp;-<br> Oeding',
     pdf: '/stuff/karte6.pdf',
-    pdf_size: '362 KB'
+    pdf_size: '362 KB',
+    additional: ['/images/6a_schild.jpg', '/images/6b_schild.jpg'],
+    imgid: 6
   },
   {
     image: '/images/bild7.jpg',
-    location: 'Borken - Burlo',
+    location: 'Borken&thinsp;-<br> Burlo',
     pdf: '/stuff/karte7.pdf',
-    pdf_size: '367 KB'
+    pdf_size: '367 KB',
+    additional: '/images/7_schild.jpg',
+    imgid: 7
   },
   {
-    image: '/images/bild8.jpg',
-    location: 'Bocholt - Barlo',
+    image: '/images/bild8 2.jpg',
+    location: 'Bocholt&thinsp;-<br> Barlo',
     pdf: '/stuff/karte8.pdf',
-    pdf_size: '350 KB'
+    pdf_size: '350 KB',
+    additional: '/images/8_schild.jpg',
+    imgid: 8
+  },
+  {
+    thumb: '/images/background-right.jpg',
+    thumblink: '/info/'
   }
 ]
