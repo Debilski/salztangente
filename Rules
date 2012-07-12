@@ -18,6 +18,7 @@ end
 
 compile '/css/*' do
   filter :sass, :syntax => :scss
+  filter :relativize_paths, :type => :css
 end
 
 compile '/javascript/' do
@@ -29,6 +30,7 @@ compile '*' do
   else
     filter :erb
     layout 'default'
+    filter :relativize_paths, :type => :html
   end
 end
 

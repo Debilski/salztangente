@@ -13,6 +13,7 @@ GEM
     json (1.7.3)
     nanoc (3.3.6)
       cri (~> 2.2)
+    nokogiri (1.5.5)
     rack (1.4.1)
     sass (3.1.18)
     systemu (2.5.0)
@@ -25,4 +26,5 @@ DEPENDENCIES
   compass
   json
   nanoc
+  nokogiri
   systemu

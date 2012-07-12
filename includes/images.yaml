@@ -5,6 +5,7 @@
   },
   {
     image: '/images/bild1.jpg',
+    thumb: '/images/bild1-th.jpg',
     location: 'Gronau&thinsp;-<br> Epe',
     pdf: '/stuff/karte1.pdf',
     pdf_size: '342 KB',
@@ -13,6 +14,7 @@
   },
   {
     image: '/images/bild2.jpg',
+    thumb: '/images/bild2-th.jpg',
     location: 'Ahaus&thinsp;-<br> Haus Horst',
     pdf: '/stuff/karte2.pdf',
     pdf_size: '363 KB',
@@ -21,6 +23,7 @@
   },
   {
     image: '/images/bild3.jpg',
+    thumb: '/images/bild3-th.jpg',
     location: 'Ottenstein&thinsp;-<br> Hörsteloe',
     pdf: '/stuff/karte3.pdf',
     pdf_size: '370 KB',
@@ -29,6 +32,7 @@
   },
   {
     image: '/images/bild4.jpg',
+    thumb: '/images/bild4-th.jpg',
     location: 'Vreden&thinsp;-<br> Ostendarp',
     pdf: '/stuff/karte4.pdf',
     pdf_size: '383 KB',
@@ -37,6 +41,7 @@
   },
   {
     image: '/images/bild5.jpg',
+    thumb: '/images/bild5-th.jpg',
     location: 'Stadtlohn&thinsp;-<br> Wenningfeld',
     pdf: '/stuff/karte5.pdf',
     pdf_size: '397 KB',
@@ -45,6 +50,7 @@
   },
   {
     image: '/images/bild6.jpg',
+    thumb: '/images/bild6-th.jpg',
     location: 'Südlohn&thinsp;-<br> Oeding',
     pdf: '/stuff/karte6.pdf',
     pdf_size: '362 KB',
@@ -53,6 +59,7 @@
   },
   {
     image: '/images/bild7.jpg',
+    thumb: '/images/bild7-th.jpg',
     location: 'Borken&thinsp;-<br> Burlo',
     pdf: '/stuff/karte7.pdf',
     pdf_size: '367 KB',
@@ -60,7 +67,8 @@
     imgid: 7
   },
   {
-    image: '/images/bild8 2.jpg',
+    image: '/images/bild8.jpg',
+    thumb: '/images/bild8-th.jpg',
     location: 'Bocholt&thinsp;-<br> Barlo',
     pdf: '/stuff/karte8.pdf',
     pdf_size: '350 KB',
