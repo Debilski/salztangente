@@ -21,7 +21,7 @@ compile '/css/*' do
   filter :relativize_paths, :type => :css
 end
 
-compile '/javascript/' do
+compile '/javascript/*' do
 end
 
 compile '*' do
@@ -31,6 +31,7 @@ compile '*' do
     filter :erb
     layout 'default'
     filter :relativize_paths, :type => :html
+    filter :html_tidy
   end
 end
 

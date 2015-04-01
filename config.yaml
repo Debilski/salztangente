@@ -82,6 +82,6 @@ watcher:
 deploy:
   default:
     kind: rsync
-    options: [ '-a', '--progress' ]
-    dst: "debilski@hydra.uberspace.de:/var/www/virtual/debilski/salztangente.external.debilski.de"
+    options: ['-glpPrtvz', '--delete']
+    dst: "meloria@acrux.uberspace.de:/home/meloria/html/salztangente"
 

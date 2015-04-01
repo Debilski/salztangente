@@ -1,62 +1,213 @@
+<style>
+
+/* Schriftzug - Franz John Salztangente */
+#Sitelogo { 
+  background-image: url(images/title_font.gif);
+  background-repeat:no-repeat;
+  height: 101px; width: 301px; 
+  position: absolute;
+  margin-left: 20px; 
+  margin-top: 20px; 
+}
+
+/* Hintergrundbild / Karte*/
+#bg {
+  height: 555px; width: 800px; 
+  background-color: #fff;
+  background-image: url(images/background.jpg);
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  position: absolute;
+}
+
+/* Position der Wegpunkte */
+#Standort1 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 612px; 
+  margin-top: 56px; 
+  position: absolute; 
+  visibility: visible; 
+}    
+
+#Standort2 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 624px; 
+  margin-top: 106px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#Standort3 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 536px; 
+  margin-top: 117px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#Standort4 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 448px; 
+  margin-top: 169px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#Standort5 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 444px; 
+  margin-top: 216px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#Standort6 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 395px; 
+  margin-top: 275px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#Standort7 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 319px; 
+  margin-top: 316px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#Standort8 { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 193px; 
+  margin-top: 348px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+/* Start/Ziel Wegpunkte */
+#start { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 625px; 
+  margin-top: 23px; 
+  position: absolute; 
+  visibility: visible; 
+}
+
+#ziel { 
+  height: 22px; 
+  width: 22px; 
+  margin-left: 73px; 
+  margin-top:415px; 
+  position: absolute; 
+  visibility: visible; 
+}
 
 
+/* Navigationsbereich */    
+#footer_wrap {
+  background-image: url(../images/navi_background.jpg);
+  background-repeat: no-repeat;
+  height: auto; 
+  width: 765px; 
+  position: absolute;
+  margin-left: 20px; 
+  margin-top: 550px; 
+}
 
-  <div id="bg"></div>
+#footer_wrap p {
+  margin-top: 0;
+}
 
-  <div id="Sitelogo"></div>
+#footer_info {
+  padding-left:80px;
+  padding-top:12px;
+}
 
-  <div id="Standort1">
-    <a href="maps/#/1" rel="lightbox[roadtrip]" title="Standort 1 (km 10,8)"><img src="/images/wegpunkt9.jpg" border="0"></a>
+#footer_meta {
+  padding-left:80px;
+  padding-top:0px;
+}
+
+#Pointdummy {
+  height: 30px; width: 30px; 
+  position: absolute;
+  margin-left: 65px; 
+  margin-top: 555px; 
+}
+
+#Forwardbutton {
+  height: 30px; width: 30px; 
+  position: absolute;
+  margin-left: 725px; 
+  margin-top: 555px; 
+}
+</style>
+
+<div class="row">
+  <div class="col-xs-6 col-md-4">
+
+<div id="bg"></div>
+
+<div id="Sitelogo"></div>
+
+<div id="Standort1">
+  <a href="maps/#/1" title="Standort 1 (km 10,8)"><img src="/images/wegpunkt9.jpg" border="0"></a>
+</div>
+
+<div id="Standort2">
+  <a href="maps/#/2" title="Standort 2 (km 23,1)"><img src="/images/wegpunkt8.jpg" border="0"></a>
+</div>
+
+<div id="Standort3">
+  <a href="maps/#/3" title="Standort 3 (km 34,4)"><img src="/images/wegpunkt7.jpg" border="0"></a>
+</div>
+
+<div id="Standort4">
+  <a href="maps/#/4" title="Standort 4 (km 45,8)"><img src="/images/wegpunkt6.jpg" border="0"></a>
+</div>
+
+<div id="Standort5">
+  <a href="maps/#/5" title="Standort 5 (km 51,5)"><img src="/images/wegpunkt5.jpg" border="0"></a>
+</div>
+
+<div id="Standort6">
+  <a href="maps/#/6" title="Standort 6 (km 66,3)"><img src="/images/wegpunkt4.jpg" border="0"></a>
+</div>
+
+<div id="Standort7">
+  <a href="maps/#/7" title="Standort 7 (km 73,8)"><img src="/images/wegpunkt3.jpg" border="0"></a>
+</div>
+
+<div id="Standort8">
+  <a href="maps/#/8" title="Standort 8 (km 79,4)"><img src="/images/wegpunkt2.jpg" border="0"></a>
+</div><!-- Start / Ziel -->
+
+<div id="start">
+  <a href="index.html" title="Start"><img src="/images/wegpunkt10.jpg" border="0"></a>
+</div>
+
+<div id="ziel">
+  <a href="index.html" title="Ziel"><img src="/images/wegpunkt1.jpg" border="0"></a>
+</div><!-- Ende Start / Ziel -->
+
+<div id="footer_wrap">
+  <p id="footer_info">Ein Radweg verbindet die 8 Stabfelder der Salztangente. Klicken Sie auf die Wegepunkte</p>
+  <p id="footer_meta"><small>® Franz John | Die Salztangente | Skulptur-Biennale Münsterland 2005</small></p>
+</div>
+
+<div id="Pointdummy"><img src="/images/follow_waypoint.jpg" border="0"></div>
+
+<div id="Forwardbutton"><a href="/info"><img src="/images/navi_forw.jpg" border="0"></div>
+
   </div>
-
-  <div id="Standort2">
-    <a href="maps/#/2" rel="lightbox[roadtrip]" title="Standort 2 (km 23,1)"><img src="/images/wegpunkt8.jpg" border="0"></a>
   </div>
-
-  <div id="Standort3">
-    <a href="maps/#/3" rel="lightbox[roadtrip]" title="Standort 3 (km 34,4)"><img src="/images/wegpunkt7.jpg" border="0"></a>
-  </div>
-
-  <div id="Standort4">
-    <a href="maps/#/4" rel="lightbox[roadtrip]" title="Standort 4 (km 45,8)"><img src="/images/wegpunkt6.jpg" border="0"></a>
-  </div>
-
-  <div id="Standort5">
-    <a href="maps/#/5" rel="lightbox[roadtrip]" title="Standort 5 (km 51,5)"><img src="/images/wegpunkt5.jpg" border="0"></a>
-  </div>
-
-  <div id="Standort6">
-    <a href="maps/#/6" rel="lightbox[roadtrip]" title="Standort 6 (km 66,3)"><img src="/images/wegpunkt4.jpg" border="0"></a>
-  </div>
-
-  <div id="Standort7">
-    <a href="maps/#/7" rel="lightbox[roadtrip]" title="Standort 7 (km 73,8)"><img src="/images/wegpunkt3.jpg" border="0"></a>
-  </div>
-
-  <div id="Standort8">
-    <a href="maps/#/8" rel="lightbox[roadtrip]" title="Standort 8 (km 79,4)"><img src="/images/wegpunkt2.jpg" border="0"></a>
-  </div><!-- Start / Ziel -->
-
-  <div id="start">
-    <a href="index.html" title="Start"><img src="/images/wegpunkt10.jpg" border="0"></a>
-  </div>
-
-  <div id="ziel">
-    <a href="index.html" title="Ziel"><img src="/images/wegpunkt1.jpg" border="0"></a>
-  </div><!-- Ende Start / Ziel -->
-
-  <div id="footer_wrap">
-    <div id="footer_info">
-      <h2>Ein Radweg verbindet die 8 Stabfelder der Salztangente. Klicken Sie auf die Wegepunkte</h2>
-    </div>
-
-    <div id="footer_meta">
-      <h3>® Franz John | Die Salztangente | Skulptur-Biennale Münsterland 2005</h3>
-    </div>
-  </div>
-
-  <div id="Pointdummy"><img src="/images/follow_waypoint.jpg" border="0"></div>
-
-  <div id="Forwardbutton"><a href="/info"><img src="/images/navi_forw.jpg" border="0"></div>
-</body>
-</html>
