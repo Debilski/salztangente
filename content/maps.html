@@ -50,12 +50,17 @@ elems = YAML::load( File.open( 'includes/images.yaml' ) )
     <aside id="slider-aside">
       <h1></h1>
       <p></p>
+      <div class="row visible-xs-block">
+        <div class="col-xs-4 col-sm-4"><a href=/>home</a></div>
+        <div class="col-xs-4 col-sm-4 text-center"><a href=javascript:showAdditional()>info</a></div>
+        <div class="col-xs-4 col-sm-4 text-right"><a href=/info/>maps</a></div>
+      </div>
       <span class="slider-aside-image"></span>
     </aside>
   </div>
 </div>
 
-<div class="row">
+<div class="row hidden-xs">
   <div class="col-md-1"></div>
   <div class="col-md-8">
     <div class="slider-thumbs">
