@@ -27,6 +27,7 @@
   pdf: '/stuff/karte3.pdf'
   pdf_size: '370 KB'
   additional: ['/images/3a_schild.jpg', '/images/3b_schild.jpg']
+  additional_mobile: '/images/schild3-doppel.jpg'
   imgid: 3
   coordinates: N 52° 05.454, E 06° 54.951
 
@@ -54,6 +55,7 @@
   pdf: '/stuff/karte6.pdf'
   pdf_size: '362 KB'
   additional: ['/images/6a_schild.jpg', '/images/6b_schild.jpg']
+  additional_mobile: '/images/schild6-doppel.jpg'
   imgid: 6
   coordinates: N 51° 55.965, E 06° 48.628
 

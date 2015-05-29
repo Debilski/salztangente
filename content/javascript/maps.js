@@ -1,4 +1,3 @@
-$(function() {
         var setLocation = function(location) {
                 $('#slider-aside h1').html(location);
         }
@@ -55,12 +54,6 @@ $(function() {
                 return false;
         }
 
-        // assign a click event to the external thumbnails
-        $('.slider-thumbs a').click(function(){
-                var thumbIndex = $(this).data("refid");
-                return showImage(thumbIndex);
-        });
-
         function checkHash() {
                 if($(location).attr("hash")) {
                         var hash = $(location).attr("hash");
@@ -72,6 +65,14 @@ $(function() {
                         return showImage(0);
                 }
         }
+
+        $(function() {
+        // assign a click event to the external thumbnails
+        $('.slider-thumbs a').click(function(){
+                var thumbIndex = $(this).data("refid");
+                return showImage(thumbIndex);
+        });
+
 
         $('.carousel').on('slide.bs.carousel', function(direction, relatedTarget) {
         });
@@ -105,5 +106,33 @@ $(function() {
 
 
         function showAdditional() {
-                window.open("/salztangente" + $(".item.active").first().data("additional"));
+                window.open("/salztangente" + $(".item.active").first().data("additional_mobile"), '_self');
         }
+
+
+        function goNext() {
+                 if($(location).attr("hash")) {
+                        var hash = $(location).attr("hash");
+                        var site_id_rgx = /#\/(\d+)/;
+                        var site_id = parseInt(site_id_rgx.exec(hash)[1]);
+
+                        return showImage(site_id + 1);
+                } else {
+                        return showImage(0 + 1);
+                }
+        }
+
+
+        function goPrev() {
+                 if($(location).attr("hash")) {
+                        var hash = $(location).attr("hash");
+                        var site_id_rgx = /#\/(\d+)/;
+                        var site_id = parseInt(site_id_rgx.exec(hash)[1]);
+
+                        return showImage(site_id - 1);
+                } else {
+                        return showImage(0 - 1);
+                }
+        }
+
+

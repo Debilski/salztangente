@@ -25,7 +25,8 @@ elems = YAML::load( File.open( 'includes/images.yaml' ) )
                       elem["additional"]
                      else
                       ""
-                     end
+                      end
+        additional_mobile = elem["additional_mobile"] || elem["additional"]
         %>
         <%= %{ <div class="item"
                     data-imgid="#{elem["imgid"] || ''}"
@@ -33,6 +34,7 @@ elems = YAML::load( File.open( 'includes/images.yaml' ) )
                     data-location="#{elem["location"] || ''}"
                     data-coordinates="#{ERB::Util.h elem["coordinates"] || ''}"
                     data-additional="#{additional}"
+                    data-additional_mobile="#{additional_mobile}"
                     data-additional_thumb="#{''}"
                     data-pdf="#{elem["pdf"] || ''}"
                     data-pdf_size="#{elem["pdf_size"] || ''}"
@@ -43,19 +45,30 @@ elems = YAML::load( File.open( 'includes/images.yaml' ) )
         end
         %>
       </div>
+        <!-- Controls -->
+  <a class="left carousel-control" href=javascript:goPrev() role="button">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href=javascript:goNext() role="button">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
     </div>
   </div>
 
   <div class="col-md-3">
     <aside id="slider-aside">
-      <h1></h1>
+      <div class="row visible-xs-block">
+        <div class="col-xs-12 col-sm-12 text-right"><a href=javascript:showAdditional()>detail</a></div>
+      </div>
+      <h1 style="margin-top: 0"></h1>
       <p></p>
       <div class="row visible-xs-block">
-        <div class="col-xs-4 col-sm-4"><a href=/>home</a></div>
-        <div class="col-xs-4 col-sm-4 text-center"><a href=javascript:showAdditional()>info</a></div>
-        <div class="col-xs-4 col-sm-4 text-right"><a href=/info/>maps</a></div>
+        <div class="col-xs-6 col-sm-6"><a href=/>home</a></div>
+        <div class="col-xs-6 col-sm-6 text-right"><a href=/info/>maps</a></div>
       </div>
-      <span class="slider-aside-image"></span>
+      <span class="slider-aside-image hidden-xs"></span>
     </aside>
   </div>
 </div>

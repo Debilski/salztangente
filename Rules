@@ -13,11 +13,16 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+require 'compass'
+
+Compass.add_project_configuration 'compass.rb'
+sass_options = Compass.sass_engine_options
+
 compile '/static/*' do
 end
 
 compile '/css/*' do
-  filter :sass, :syntax => :scss
+  filter :sass, sass_options
   filter :relativize_paths, :type => :css
 end
 
