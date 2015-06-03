@@ -1,3 +1,7 @@
+---
+body_id: index
+---
+
 <style>
 
 /* Schriftzug - Franz John Salztangente */
@@ -8,6 +12,10 @@
   position: absolute;
   margin-left: 20px; 
   margin-top: 20px; 
+}
+
+#themap {
+  margin-left: -15px;
 }
 
 /* Hintergrundbild / Karte*/
@@ -154,11 +162,13 @@
 </style>
 
 <div class="row">
-  <div class="col-xs-6 col-md-4">
+    <div class="col-xs-6 col-md-4">
+
+      <div id="themap">
 
 <div id="bg"></div>
 
-<div id="Sitelogo"></div>
+<a href="info"><div id="Sitelogo"></div></a>
 
 <div id="Standort1">
   <a href="maps/#/1" title="Standort 1 (km 10,8)"><img src="/images/wegpunkt9.jpg" border="0"></a>
@@ -193,12 +203,14 @@
 </div><!-- Start / Ziel -->
 
 <div id="start">
-  <a href="index.html" title="Start"><img src="/images/wegpunkt10.jpg" border="0"></a>
+  <a href="maps/#/1" title="Start"><img src="/images/wegpunkt10.jpg" border="0"></a>
 </div>
 
 <div id="ziel">
-  <a href="index.html" title="Ziel"><img src="/images/wegpunkt1.jpg" border="0"></a>
+  <a href="maps/#/8" title="Ziel"><img src="/images/wegpunkt1.jpg" border="0"></a>
 </div><!-- Ende Start / Ziel -->
+
+</div>
 
 <div id="footer_wrap">
   <p id="footer_info">Ein Radweg verbindet die 8 Stabfelder der Salztangente. Klicken Sie auf die Wegepunkte</p>
@@ -206,8 +218,6 @@
 </div>
 
 <div id="Pointdummy"><img src="/images/follow_waypoint.jpg" border="0"></div>
-
-<div id="Forwardbutton"><a href="/info"><img src="/images/navi_forw.jpg" border="0"></div>
 
   </div>
   </div>
