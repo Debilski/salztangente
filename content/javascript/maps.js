@@ -7,7 +7,10 @@
                 var maps = "https://www.google.de/maps/place/";
                 //
 
-                $('#slider-aside p').html('<a href="' + maps + encodeURIComponent(coords) + '" target="_blank">' + coords + '</a>');
+                $('#slider-aside .coords').html('<a href="' + maps + encodeURIComponent(coords) + '" target="_blank">' + coords + '</a>');
+        }
+        var setDistance = function(distance) {
+                $('#slider-aside .distance').text(distance);
         }
 
         var setAdditional = function(additional, thumb) {
@@ -26,6 +29,7 @@
         }
 
         function showImage(id) {
+
                 // get DOM for the image
                 var image = $('.carousel .item[data-imgid=' + id + ']').first();
 
@@ -36,6 +40,7 @@
                 var additional = $(image).data("additional");
                 var additional_thumb = $(image).data("additional_thumb");
                 var coords = $(image).data("coordinates");
+                var distance = $(image).data("distance");
                 var pdf = $(image).data("pdf");
                 var pdf_size = $(image).data("pdf_size");
 
@@ -43,6 +48,7 @@
                 if (location) setLocation(location);
 
                 setCoords(coords)
+                setDistance(distance)
                 setAdditional(additional, additional_thumb);
 
                 if (thumbIndex == undefined || isNaN(thumbIndex)) return true;

@@ -38,8 +38,9 @@ elems = YAML::load( File.open( 'includes/images.yaml' ) )
                     data-additional_thumb="#{''}"
                     data-pdf="#{elem["pdf"] || ''}"
                     data-pdf_size="#{elem["pdf_size"] || ''}"
+                    data-distance="#{elem["distance"] || ''}"
                     >
-                    <a href="#/#{idx % 8 + 1}"><img src="#{elem["image"]}" /></a>
+                    <img src="#{elem["image"]}" />
           </div> } %>
         <% end
         end
@@ -63,10 +64,13 @@ elems = YAML::load( File.open( 'includes/images.yaml' ) )
         <div class="col-xs-12 col-sm-12 text-right"><a href=javascript:showAdditional()>detail</a></div>
       </div>
       <h1 style="margin-top: 0"></h1>
-      <p></p>
+      <p>
+        <span class="coords"></span><br>
+        <span class="distance white"></span>
+      </p>
       <div class="row visible-xs-block">
         <div class="col-xs-6 col-sm-6"><a href=/>home</a></div>
-        <div class="col-xs-6 col-sm-6 text-right"><a href=/info/#donwload>maps</a></div>
+        <div class="col-xs-6 col-sm-6 text-right"><a href=/info/#download>maps</a></div>
       </div>
       <span class="slider-aside-image hidden-xs"></span>
     </aside>
