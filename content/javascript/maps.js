@@ -37,7 +37,7 @@
 
                 var thumbIndex = $(image).data("refid");
                 var location = $(image).data("location");
-                var additional = $(image).data("additional");
+                var additional = $(image).data("additional_mobile");
                 var additional_thumb = $(image).data("additional_thumb");
                 var coords = $(image).data("coordinates");
                 var distance = $(image).data("distance");
