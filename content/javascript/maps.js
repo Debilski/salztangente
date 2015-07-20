@@ -122,9 +122,9 @@
                         var site_id_rgx = /#\/(\d+)/;
                         var site_id = parseInt(site_id_rgx.exec(hash)[1]);
 
-                        return showImage(site_id + 1);
+                         showImage(site_id + 1);
                 } else {
-                        return showImage(0 + 1);
+                         showImage(0 + 1);
                 }
         }
 
@@ -135,10 +135,8 @@
                         var site_id_rgx = /#\/(\d+)/;
                         var site_id = parseInt(site_id_rgx.exec(hash)[1]);
 
-                        return showImage(site_id - 1);
+                        showImage(site_id - 1);
                 } else {
-                        return showImage(0 - 1);
+                        showImage(0 - 1);
                 }
         }
-
-
